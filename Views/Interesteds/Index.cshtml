@@ -1,0 +1,28 @@
+﻿@using MvcCvWebsite.Models.Entity
+@model List<Interesteds>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">Hobiler & İlgi Alanlarım Bölümü</h2>
+<table class="table table-bordered table-hover">
+    <tr class="active">
+        <th>Id</th>
+        <th>İgi Alanım</th>
+        <th>Silme</th>
+        <th>Güncelleme</th>
+    </tr>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Interested</td>
+                <td><a href="/Interesteds/RemoveInterested/@i.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Interesteds/GetInterested/@i.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Interesteds/NewInterested" class="btn btn-primary">Yeni İlgi Alanı Ekle</a>

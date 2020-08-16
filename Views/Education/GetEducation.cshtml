@@ -1,0 +1,33 @@
+﻿@model MvcCvWebsite.Models.Entity.Education
+@{
+    ViewBag.Title = "GetEducation";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateEducation", "Education", FormMethod.Post))
+{
+    <h2 class="text-center">Eğitim Güncelleme</h2>
+    <form method="post" class="form-group-lg">
+
+        @Html.HiddenFor(x => x.Id)
+        <label>Okul</label>
+        @Html.TextBoxFor(x => x.University, new { @class = "form-control" })<br />
+
+        <label>Alan</label>
+        @Html.TextBoxFor(x => x.Faculty, new { @class = "form-control" })<br />
+
+        <label>Bölüm</label>
+        @Html.TextBoxFor(x => x.Branch, new { @class = "form-control" })<br />
+
+        <label>Ortalama(GPA)</label>
+        @Html.TextBoxFor(x => x.GPA, new { @class = "form-control" })<br />
+
+        <label>Tarih</label>
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })<br />
+
+        <button class="btn btn-success">Bilgileri Güncelle</button>
+
+    </form>
+}
+
+

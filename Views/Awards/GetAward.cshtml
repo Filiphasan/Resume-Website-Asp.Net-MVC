@@ -1,0 +1,21 @@
+﻿@model MvcCvWebsite.Models.Entity.Awards
+@{
+    ViewBag.Title = "GetAward";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateAward", "Awards", FormMethod.Post))
+{
+    <h2 class="text-center">Sertifikalar & Ödüller Güncelleme</h2>
+    <form method="post" class="form-group-lg">
+
+        @Html.HiddenFor(x => x.Id)
+        <label>Sertifikalar & Ödüller</label>
+        @Html.TextBoxFor(x => x.Award, new { @class = "form-control" })<br />
+
+        <button class="btn btn-success">Bilgileri Güncelle</button>
+
+    </form>
+}
+
+

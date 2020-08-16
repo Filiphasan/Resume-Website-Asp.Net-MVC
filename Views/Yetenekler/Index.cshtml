@@ -1,0 +1,29 @@
+﻿@using MvcCvWebsite.Models.Entity
+@model List<Skills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">Yetenekler Bölümü</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Yetenek</th>
+        <th>Silme</th>
+        <th>Güncelleme</th>
+    </tr>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Id</td>
+                <td>@s.Skill</td>
+                <td><a href="/Yetenekler/RemoveSkill/@s.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Yetenekler/GetSkill/@s.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Yetenekler/NewSkill" class="btn btn-primary">Yeni Yetenek Ekle</a>
+

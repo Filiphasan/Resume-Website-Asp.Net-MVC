@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCCvWebsiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Surname" Type="varchar" MaxLength="30" />
+    <Property Name="Adress" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Mail" Type="varchar" MaxLength="150" />
+    <Property Name="About" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="varchar" MaxLength="20" />
+    <Property Name="Sifre" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Awards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Award" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="University" Type="varchar" MaxLength="50" />
+    <Property Name="Faculty" Type="varchar" MaxLength="50" />
+    <Property Name="Branch" Type="varchar" MaxLength="150" />
+    <Property Name="GPA" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="Date" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="20" />
+    <Property Name="SubTitle" Type="varchar" MaxLength="20" />
+    <Property Name="Date" Type="varchar" MaxLength="20" />
+    <Property Name="Detail" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Interesteds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Interested" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Skills">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Skill" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityContainer Name="MVCCvWebsiteModelStoreContainer">
+    <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Awards" EntityType="Self.Awards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Interesteds" EntityType="Self.Interesteds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skills" EntityType="Self.Skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

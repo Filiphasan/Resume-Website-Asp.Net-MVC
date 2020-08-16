@@ -1,0 +1,37 @@
+﻿@using MvcCvWebsite.Models.Entity
+@model List<Education>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">Eğitim Bölümü</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Okul</th>
+        <th>Alan</th>
+        <th>Bölüm</th>
+        <th>Ortalama(GPA)</th>
+        <th>Tarih</th>
+        <th>Silme</th>
+        <th>Güncelleme</th>
+    </tr>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.University</td>
+                <td>@e.Faculty</td>
+                <td>@e.Branch</td>
+                <td>@e.GPA</td>
+                <td>@e.Date</td>
+                <td><a href="/Education/RemoveEducation/@e.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Education/GetEducation/@e.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Education/NewEducation" class="btn btn-primary">Yeni Eğitim Ekle</a>
+

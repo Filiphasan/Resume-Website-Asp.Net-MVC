@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCCvWebsiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="About1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Awards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Award" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="University" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Faculty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="GPA" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Interesteds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Interested" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Skills">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MVCCvWebsiteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About" EntityType="Self.About" />
+    <EntitySet Name="Awards" EntityType="Self.Awards" />
+    <EntitySet Name="Education" EntityType="Self.Education" />
+    <EntitySet Name="Interesteds" EntityType="Self.Interesteds" />
+    <EntitySet Name="Skills" EntityType="Self.Skills" />
+    <EntitySet Name="Experience" EntityType="MVCCvWebsiteModel.Experience" />
+    <EntitySet Name="Admin" EntityType="MVCCvWebsiteModel.Admin" />
+    <EntitySet Name="sysdiagrams" EntityType="MVCCvWebsiteModel.sysdiagrams" />
+  </EntityContainer>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SubTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

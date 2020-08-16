@@ -1,0 +1,35 @@
+﻿@model MvcCvWebsite.Models.Entity.About
+@{
+    ViewBag.Title = "GetAbout";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post))
+{
+    <h2 class="text-center">Hakkımda Bilgileri Güncelleme</h2>
+    <form method="post" class="form-group-lg">
+        @Html.HiddenFor(x => x.Id)
+        <label>Adım</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })<br />
+
+        <label>Adım</label>
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })<br />
+
+        <label>Adım</label>
+        @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })<br />
+
+        <label>Adım</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })<br />
+
+        <label>Adım</label>
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })<br />
+
+        <label>Adım</label>
+        @Html.TextBoxFor(x => x.About1, new { @class = "form-control" })<br />
+
+        <button class="btn btn-success">Bilgileri Güncelle</button>
+
+    </form>
+}
+
+

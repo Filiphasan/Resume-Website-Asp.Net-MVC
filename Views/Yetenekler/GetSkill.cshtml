@@ -1,0 +1,21 @@
+﻿@model MvcCvWebsite.Models.Entity.Skills
+@{
+    ViewBag.Title = "GetSkill";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateSkill", "Yetenekler", FormMethod.Post))
+{
+    <h2 class="text-center">Yetenek Güncelleme</h2>
+    <form method="post" class="form-group-lg">
+
+        @Html.HiddenFor(x => x.Id)
+        <label>Yetenek</label>
+        @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })<br />
+
+        <button class="btn btn-success">Bilgileri Güncelle</button>
+
+    </form>
+}
+
+

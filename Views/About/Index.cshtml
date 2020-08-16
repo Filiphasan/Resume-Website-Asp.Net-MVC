@@ -1,0 +1,34 @@
+﻿@using MvcCvWebsite.Models.Entity
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">Hakkımda Bölümü</h2>
+<table class="table table-bordered table-hover">
+    <tr class="active">
+        <th>Adım</th>
+        <th>Soyadım</th>
+        <th>Adresim</th>
+        <th>Telefonum</th>
+        <th>Mail Adresim</th>
+        <th>Hakkımda</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var a in Model)
+        {
+        <tr>
+            <td>@a.Name</td>
+            <td>@a.Surname</td>
+            <td>@a.Adress</td>
+            <td>@a.Phone</td>
+            <td>@a.Mail</td>
+            <td>@a.About1</td>
+            <td><a href="/About/GetAbout/@a.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+

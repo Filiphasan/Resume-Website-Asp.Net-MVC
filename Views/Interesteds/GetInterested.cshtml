@@ -1,0 +1,21 @@
+﻿@model MvcCvWebsite.Models.Entity.Interesteds
+@{
+    ViewBag.Title = "GetInterested";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateInterested", "Interesteds", FormMethod.Post))
+{
+    <h2 class="text-center">Hobi & İlgi Alanları Güncelleme</h2>
+    <form method="post" class="form-group-lg">
+
+        @Html.HiddenFor(x => x.Id)
+        <label>>Hobi & İlgi Alanlarım</label>
+        @Html.TextBoxFor(x => x.Interested,new { @class="form-control"})<br />
+
+        <button class="btn btn-success">Bilgileri Güncelle</button>
+
+    </form>
+}
+
+

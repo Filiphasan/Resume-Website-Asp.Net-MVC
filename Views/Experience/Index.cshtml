@@ -1,0 +1,36 @@
+﻿@using MvcCvWebsite.Models.Entity
+@model List<Experience>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">Deneyimler Bölümü</h2>
+<table class="table table-bordered table-hover">
+    <tr class="active">
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Tarih</th>
+        <th>Detay</th>
+        <th>Silme</th>
+        <th>Güncelleme</th>
+    </tr>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.Title</td>
+                <td>@e.SubTitle</td>
+                <td>@e.Date</td>
+                <td>@e.Detail</td>
+                <td><a href="/Experience/DeleteExperience/@e.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Experience/GetExperience/@e.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Experience/YeniDeneyim" class="btn btn-primary">Yeni Deneyim Ekle</a>
+

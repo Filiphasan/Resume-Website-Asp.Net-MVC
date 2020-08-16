@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCCvWebsiteModelStoreContainer" CdmEntityContainer="MVCCvWebsiteEntities">
+    <EntitySetMapping Name="About">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.About">
+        <MappingFragment StoreEntitySet="About">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="About1" ColumnName="About" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.Awards">
+        <MappingFragment StoreEntitySet="Awards">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Award" ColumnName="Award" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Education">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.Education">
+        <MappingFragment StoreEntitySet="Education">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="University" ColumnName="University" />
+          <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="GPA" ColumnName="GPA" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interesteds">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.Interesteds">
+        <MappingFragment StoreEntitySet="Interesteds">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Interested" ColumnName="Interested" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.Skills">
+        <MappingFragment StoreEntitySet="Skills">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Experience">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.Experience">
+        <MappingFragment StoreEntitySet="Experience">
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MVCCvWebsiteModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

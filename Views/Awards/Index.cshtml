@@ -1,0 +1,29 @@
+﻿@using MvcCvWebsite.Models.Entity
+@model List<Awards>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 class="text-center">Sertifikalar & Ödüller Bölümü</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Sertifika</th>
+        <th>Silme</th>
+        <th>Güncelleme</th>
+    </tr>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.Id</td>
+                <td>@a.Award</td>
+                <td><a href="/Awards/RemoveAward/@a.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Awards/GetAward/@a.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Awards/NewAward" class="btn btn-primary">Yeni Sertifika Ekle</a>
+
